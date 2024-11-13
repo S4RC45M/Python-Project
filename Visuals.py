@@ -3,7 +3,7 @@ import tkinter as tk
 
 #constants for color and fonts
 BACKGROUNDCOLOR = "#FEF6C9"
-FONTNAME=""
+FONTNAME="Courier"
 
 #create a window and grid layout
 window = tk.Tk()
