@@ -12,4 +12,5 @@ window.config(bg=BACKGROUNDCOLOR)
 window.rowconfigure([0,1,2,3,4],minsize=100,weight=1)
 window.columnconfigure([0,1,2,3,4],minsize=100,weight=1)
 
+#keeps the window open
 window.mainloop()
