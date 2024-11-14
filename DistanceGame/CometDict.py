@@ -12,11 +12,11 @@ spaceobjects = [
     {"name": "Eris",
      "orbityears": 556,
        },
-    {"name": "Jupiter",
-        "orbityears": 12,     
+    {"name": "Vesta",
+        "orbityears": 4,     
        },
-    {
-    
+    {"name": "Neptune",
+        "orbityears": 165,     
     }
 
 ]
