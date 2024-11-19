@@ -1,16 +1,31 @@
 import CometDict
+from Question import Question
 import random as r
+
+def compare(n1, n2):
+    if n1.answer < n2.answer:
+        return n2.name
+    elif n1.answer > n2.answer:
+        return n1.name
+
 data = CometDict.spaceobjects
 ongoing = True
-spaceobjlen = len(data)
-# randnum1 = r.randint(0,(spaceobjlen-1))
-# randnum2 = r.randint(0,(spaceobjlen-1))
-# print(data, spaceobjlen, randnum1,randnum2)
-print("Guess which one is higher!\n")
-randnum1 = r.randint(0,(spaceobjlen-1))
-randnum2 = r.randint(0,(spaceobjlen-1))
-input(f"which object is further away from the sun, {data[randnum1]["name"]} or {data[randnum2]["name"]}?\n")
-# while ongoing:
-#     randnum1 = r.randint(0,(spaceobjlen-1))
-#     randnum2 = r.randint(0,(spaceobjlen-1))
-#     input(f"which object is further away from the sun, {[randnum1]["name"]} or{[randnum1]["name"]}?\n")
+spaceobjlen = len(data) 
+
+print("Compare the distance of two objects in space compared to how close they are to the sun!\n")
+while ongoing:
+        randnum1 = r.randint(0,(spaceobjlen-1))
+        randnum2 = r.randint(0,(spaceobjlen-1))
+        space1 = Question(data[randnum1]["name"], data[randnum1]["orbityears"])
+        space2 = Question(data[randnum2]["name"], data[randnum2]["orbityears"])
+        if space1.name == space2.name:
+            pass
+        else:             
+            useranswer = input(f"which object is further away from the sun, {space1.name} or {space2.name}?\n")
+            actualanswer = compare(space1,space2)
+            if (useranswer == actualanswer):
+                    print("correct")
+            else:
+                    print("incorrect")
+
+
