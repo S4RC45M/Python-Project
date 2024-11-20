@@ -4,7 +4,7 @@ import math
 def createspaceobject(name,orbityears):
     name = name.capitalize()
     orbityears = round(orbityears)
-    return spaceobjects.append({"name": name, "orbityears": orbityears})
+    spaceobjects.append({"name": name, "orbityears": orbityears})
 
 
 spaceobjects = [
