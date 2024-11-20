@@ -2,11 +2,13 @@ import CometDict
 from Question import Question
 import random as r
 
+
 def compare(n1, n2):
     if n1.answer < n2.answer:
         return n2.name
     elif n1.answer > n2.answer:
         return n1.name
+
 
 data = CometDict.spaceobjects
 ongoing = True
