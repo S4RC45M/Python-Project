@@ -24,7 +24,25 @@ spaceobjects = [
     {
         "name":"Swift-Tuttle",
         "orbityears": 133
+    },
+        {
+        "name":"Quaoar",
+        "orbityears": 289
+    },
+        {
+        "name":"Gonggong",
+        "orbityears": 554
+    },
+        {
+        "name":"Tempel 1",
+        "orbityears": 6
+    },
+        {
+        "name":"Sedna",
+        "orbityears": 11400
     }
 
 ]
 createspaceobject("Borrelly",6.84)
+createspaceobject("Orcus",245)
+createspaceobject("Haumea",283.77)
