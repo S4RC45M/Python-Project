@@ -46,3 +46,4 @@ spaceobjects = [
 createspaceobject("Borrelly",6.84)
 createspaceobject("Orcus",245)
 createspaceobject("Haumea",283.77)
+createspaceobject("salacia", 276.52)

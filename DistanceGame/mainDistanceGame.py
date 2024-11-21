@@ -25,7 +25,7 @@ while ongoing:
         else:             
             useranswer = input(f"which object is further away from the sun, {space1.name} or {space2.name}?\n")
             actualanswer = compare(space1,space2)
-            if (useranswer == actualanswer):
+            if (useranswer.capitalize() == actualanswer):
                     print("correct")
             else:
-                    print("incorrect")
+                    print(f"incorrect, the answer was {actualanswer}")
