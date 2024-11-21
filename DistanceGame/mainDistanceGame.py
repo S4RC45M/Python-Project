@@ -1,6 +1,7 @@
 import CometDict
 from Question import Question
 import random as r
+import time
 
 def compare(n1, n2):
     if n1.answer < n2.answer:
@@ -10,6 +11,7 @@ def compare(n1, n2):
 
 data = CometDict.spaceobjects
 ongoing = True
+tries = 0 
 spaceobjlen = len(data) 
 
 print("Compare the distance of two objects in space compared to how close they are to the sun!\n")
@@ -27,5 +29,3 @@ while ongoing:
                     print("correct")
             else:
                     print("incorrect")
-
-

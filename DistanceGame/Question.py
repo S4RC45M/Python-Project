@@ -4,6 +4,4 @@ class Question:
         self.answer = answer
     
 
-# Q1 = Question("tomato",6)
 
-# print(f"{Q1.object}")
