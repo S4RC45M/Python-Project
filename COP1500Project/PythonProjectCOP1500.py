@@ -14,7 +14,7 @@ ongoing = True
 spaceobjlen = len(data)
 
 def distanceGame():
-    print("Compare the distance of two objects in space compared to how close they are to the sun!\n")
+    print("Guess how far two objects are to the Sun!\n")
     while ongoing:
         randnum1 = r.randint(0, (spaceobjlen - 1))
         randnum2 = r.randint(0, (spaceobjlen - 1))
