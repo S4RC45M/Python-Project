@@ -16,6 +16,16 @@ spaceobjlen = len(data)
 def distanceGame():
     print("Guess how far two objects are to the Sun!\n")
     while ongoing:
+        if Attempts % 4  == 0:
+            yorn = input("Do you want to keep going?")
+            if yorn.capitalize() in ["Yes","Y"]:
+                 pass
+                 Attempts+= 1
+            else:
+                print("Thank you for playing!")
+                ongoing = False
+                break
+
         randnum1 = r.randint(0, (spaceobjlen - 1))
         randnum2 = r.randint(0, (spaceobjlen - 1))
         space1 = Question(data[randnum1]["name"], data[randnum1]["orbityears"])
@@ -25,10 +35,12 @@ def distanceGame():
         else:
             useranswer = input(f"which object is further away from the sun, {space1.name} or {space2.name}?\n")
             actualanswer = compare(space1, space2)
-            if useranswer == actualanswer:
+            if useranswer.lower() == actualanswer.lower():
                 print("correct")
+                Attempts+=1
             else:
                 print("incorrect")
+                Attempts+=1
 
 def randNumGame():
     gendNum = random.randrange(2, 11)
