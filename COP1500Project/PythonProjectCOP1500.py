@@ -12,11 +12,11 @@ def compare(n1, n2):
 data = CometDict.spaceobjects
 ongoing = True
 spaceobjlen = len(data)
-
+Attempts = 1
 def distanceGame():
     print("Guess how far two objects are to the Sun!\n")
     while ongoing:
-        if Attempts % 4  == 0:
+        if Attempts % 16  == 0:
             yorn = input("Do you want to keep going?")
             if yorn.capitalize() in ["Yes","Y"]:
                  pass
