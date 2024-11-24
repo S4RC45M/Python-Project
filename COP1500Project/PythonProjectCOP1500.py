@@ -2,13 +2,13 @@ import random
 import CometDict
 from Question import Question
 import random as r
-
+#compare each objects' distance and return the name of the object with a higher value
 def compare(n1, n2):
     if n1.answer < n2.answer:
         return n2.name
     elif n1.answer > n2.answer:
         return n1.name
-
+#setup the variables to be used for the game
 data = CometDict.spaceobjects
 ongoing = True
 spaceobjlen = len(data)
@@ -16,6 +16,7 @@ Attempts = 1
 def distanceGame():
     print("Guess how far two objects are to the Sun!\n")
     while ongoing:
+        #check how many times the game has been played and give the player an option to quit or continue
         if Attempts % 16  == 0:
             yorn = input("Do you want to keep going?")
             if yorn.capitalize() in ["Yes","Y"]:
@@ -25,22 +26,25 @@ def distanceGame():
                 print("Thank you for playing!")
                 ongoing = False
                 break
-
+        #randomly select two objects from the space object dictionary
         randnum1 = r.randint(0, (spaceobjlen - 1))
         randnum2 = r.randint(0, (spaceobjlen - 1))
+        #store the name and the distance in a Question class
         space1 = Question(data[randnum1]["name"], data[randnum1]["orbityears"])
         space2 = Question(data[randnum2]["name"], data[randnum2]["orbityears"])
+        #skip this round if the two randomly selected objects are the same
         if space1.name == space2.name:
             pass
+        #store the user's answer and compare it to what the actual answer is 
         else:
             useranswer = input(f"which object is further away from the sun, {space1.name} or {space2.name}?\n")
             actualanswer = compare(space1, space2)
+            #tell the user if theygot it correct or incorrect, then increment the attempt by 1
             if useranswer.lower() == actualanswer.lower():
                 print("correct")
-                Attempts+=1
             else:
                 print("incorrect")
-                Attempts+=1
+            Attempts+=1
 
 def randNumGame():
     gendNum = random.randrange(2, 11)
