@@ -1,7 +1,7 @@
 import random
 import CometDict
 from Question import Question
-import random as r
+
 #compare each objects' distance and return the name of the object with a higher value
 def compare(n1, n2):
     if n1.answer < n2.answer:
@@ -27,8 +27,8 @@ def distanceGame():
                 ongoing = False
                 break
         #randomly select two objects from the space object dictionary
-        randnum1 = r.randint(0, (spaceobjlen - 1))
-        randnum2 = r.randint(0, (spaceobjlen - 1))
+        randnum1 = random.randint(0, (spaceobjlen - 1))
+        randnum2 = random.randint(0, (spaceobjlen - 1))
         #store the name and the distance in a Question class
         space1 = Question(data[randnum1]["name"], data[randnum1]["orbityears"])
         space2 = Question(data[randnum2]["name"], data[randnum2]["orbityears"])
