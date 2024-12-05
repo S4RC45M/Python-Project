@@ -2,6 +2,7 @@ import random
 import CometDict
 from Question import Question
 
+
 #compare each objects' distance and return the name of the object with a higher value
 def compare(n1, n2):
     if n1.answer < n2.answer:
@@ -10,14 +11,14 @@ def compare(n1, n2):
         return n1.name
 #setup the variables to be used for the game
 data = CometDict.spaceobjects
-ongoing = True
+ONGOING = True
 spaceobjlen = len(data)
-Attempts = 1
-def distanceGame():
+ATTEMPTS = 0
+def distanceGame(ongoing=ONGOING,Attempts=ATTEMPTS):
     print("Guess how far two objects are to the Sun!\n")
     while ongoing:
         #check how many times the game has been played and give the player an option to quit or continue
-        if Attempts % 16  == 0:
+        if Attempts % 3 == 0 and Attempts != 0:
             yorn = input("Do you want to keep going?")
             if yorn.capitalize() in ["Yes","Y"]:
                  pass
