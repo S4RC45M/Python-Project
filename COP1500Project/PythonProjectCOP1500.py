@@ -1,5 +1,5 @@
 import random
-import CometDict
+import SpaceObjectsDict
 from Question import Question
 
 
@@ -10,7 +10,7 @@ def compare(n1, n2):
     elif n1.answer > n2.answer:
         return n1.name
 #setup the variables to be used for the game
-data = CometDict.spaceobjects
+data = SpaceObjectsDict.spaceobjects
 ONGOING = True
 spaceobjlen = len(data)
 ATTEMPTS = 0
