@@ -12,7 +12,7 @@ data = CometDict.spaceobjects
 ongoing = True
 spaceobjlen = len(data)
 Attempts = 0
-def distanceGame():
+def distanceGame(ongoing=ongoing,Attempts=Attempts):
     print("Guess how far two objects are to the Sun!\n")
     while ongoing:
         #check how many times the game has been played and give the player an option to quit or continue
