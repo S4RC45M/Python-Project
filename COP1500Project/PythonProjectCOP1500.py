@@ -1,6 +1,8 @@
 import random
 import CometDict
 from Question import Question
+
+
 #compare each objects' distance and return the name of the object with a higher value
 def compare(n1, n2):
     if n1.answer < n2.answer:
